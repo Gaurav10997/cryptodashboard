@@ -17,7 +17,6 @@ body{
     background-color:var(--balck);
     color: var(--white);
     font-family: 'Inter', sans-serif;
-    height: 200vh;
        
 }
 
@@ -37,4 +36,9 @@ body{
 
 ::-webkit-scrollbar-thumb{
     background-color: var(--blue);
+}
+
+a{
+    text-decoration: none;
+    color: white;
 }
