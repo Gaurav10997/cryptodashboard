@@ -1,5 +1,7 @@
 import React from 'react'
 import "./styles.css"
+import TemporaryDrawer from './drawer'
+import Button from '../Button'
 function Header() {
   return (
     <nav>
@@ -14,7 +16,9 @@ function Header() {
         <a href="">
           <p className='link'>Watchlist</p>
         </a>
+        <Button title = {"DashBoard"}  outline={false}></Button>
       </div>
+      <div className="mobile__drawer link"><TemporaryDrawer className="link" /></div>
     </nav>
   )
 }

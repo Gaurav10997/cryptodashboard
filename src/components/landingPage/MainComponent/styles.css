@@ -1,0 +1,118 @@
+.landingpage__main{
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 3rem;
+    align-items: flex-start;
+}
+.landingpage__left{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1;
+    padding: 2rem;
+}
+.track_crypto,.real_time{
+    margin: 0;
+    font-size: 5.5rem;
+
+}
+.website__info{
+    font-size: 1.3rem;
+}
+
+.track_crypto{
+    color: white;
+    -webkit-text-stroke-width: 1px;
+
+}
+
+.track_crypto:hover{
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: var(--white);
+     color: var(--balck);
+     transition: all 0.3s;
+}
+.real_time{
+    color: var(--blue);
+}
+
+
+
+.btn_flex{
+    margin-top: 2rem;
+    display: flex;
+    justify-content: flex-start;
+    gap: 1.5rem;
+}
+
+.landingpage__right{
+    /* border: 1px solid red; */
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    padding: 1rem;
+    min-height: 500px;
+    min-width: 500px
+}
+.iphone{
+    position: absolute;
+    z-index: 2;
+    left: 50%;
+    width: 50%;
+    transform: translateX(-50%)
+}
+.gradient{
+    position: absolute;
+    /* min-width: 300px; */
+    top: 5rem;
+    left: 50%;
+    width: 43%;
+    transform: translateX(-50%)
+
+}
+
+@media screen and (width<=1350px) {
+    .website__info{
+        font-size: 1rem;
+    }
+    .track_crypto,.real_time{
+        margin: 0;
+        font-size: 4rem;
+    
+    }
+
+}
+
+@media screen and (width<=1100px) {
+    .track_crypto,.real_time{
+        margin: 0;
+        font-size: 3rem;
+    
+    }
+
+}
+
+@media screen and (width<=1000px) {
+    .landingpage__main{
+       flex-direction: column;
+       justify-content: center;
+       align-items: center;
+    }
+     .landingpage__right,.landingpage__right{
+        margin-top: 40px;
+
+    }
+    .landingpage__left{
+        display: flex;
+        flex-direction: column;
+        padding: 2rem;
+        justify-content: center;
+        align-items: center;
+    }
+    .website__info{
+        font-size:0.8rem;
+    }
+    
+
+}
