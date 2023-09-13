@@ -2,6 +2,9 @@ import { useState } from 'react';
 import Drawer from '@mui/material/Drawer';
 import Button from '@mui/material/Button';
 import MenuIcon from '@mui/icons-material/Menu';
+// import {ButtonName} from "./../Button"
+import ButtonName from "../Button"
+import { Link } from 'react-router-dom';
 
 
 
@@ -20,15 +23,18 @@ export default function TemporaryDrawer() {
             onClose={()=>setOpen(false)}
           >
            <div className='mobile__links'>
-              <a href="#">
-                <p className="link">Home</p>
-              </a>
-              <a href="">
-                <p className='link'>Compare</p>
-              </a>
-              <a href="">
-                <p className='link'>Watchlist</p>
-              </a>
+           <Link  to={"/"}>
+           <p className="link">Home</p>
+        </Link>
+        <Link to={"/compare"}>
+        <p className='link'>Compare</p>
+        </Link>
+        <Link to={"/watchlist"} >
+        <p className='link'>Watchlist</p>
+        </Link>
+        <Link  to={"/dashboard"}>
+            <ButtonName title = {"DashBoard"}  outline={false}></ButtonName>
+        </Link>
            </div>
           </Drawer>
     </div>
