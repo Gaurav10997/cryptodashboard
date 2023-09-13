@@ -1,0 +1,109 @@
+.grid__card{
+    display: flex;
+    flex-direction: column;
+    max-width: 330px;
+    gap: 1rem;
+    border-radius: 0.5em;
+    background-color: var(--darkgrey);
+    border: 2px solid var(--darkgrey);
+    padding: 25px;
+    cursor: pointer;
+
+}
+.grid__card:hover{
+    transform: scale(1.02);
+    transition: all 0.3s;
+}
+.grid__card_border_red:hover{
+    border: 2px solid var(--red);
+    transition: all 0.3s;
+}
+
+.grid__card_border_green:hover{
+    border: 2px solid var(--green);
+    transition: all 0.3s;
+}
+.name{
+    text-transform: uppercase;
+}
+
+.nameandlike{
+    display: flex;
+    justify-content: space-between;
+}
+
+.nameandicon{
+    display: flex;
+    align-items: center;
+    gap: 0.9rem;
+}
+.name,.shortname{
+    margin: 0;
+}
+.shortname{
+    font-size: .8rem;
+    color: var(--grey);
+}
+.rectangle{
+    padding: 0rem  1.75rem;
+    border: 2px solid var(--red);
+    border-radius: 30px;
+}
+.greenrectangle{
+    padding: 0rem  1.75rem;
+    border: 2px solid var(--green);
+    border-radius: 30px;
+}
+
+.circle{
+    padding: 5px;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    border: 2px solid var(--red);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.greencircle{
+    border: 2px solid var(--green);
+    padding: 5px;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.price_change{
+    font-size: 0.8rem;
+}
+
+.percentage{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+
+.green{
+    color: var(--green);
+}
+
+.red{
+    color: var(--red);
+}
+
+.volume{
+    font-weight: 200;
+}
+.current{
+    font-size: 0.7rem;
+  
+}
+
+.current_price{
+    margin: 0;
+}
