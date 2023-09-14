@@ -1,12 +1,12 @@
 .grid__card{
     display: flex;
     flex-direction: column;
-    max-width: 330px;
+    max-width: 350px;
     gap: 1rem;
     border-radius: 0.5em;
     background-color: var(--darkgrey);
     border: 2px solid var(--darkgrey);
-    padding: 25px;
+    padding: 35px;
     cursor: pointer;
 
 }
@@ -36,6 +36,7 @@
     display: flex;
     align-items: center;
     gap: 0.9rem;
+    min-width: 15em;
 }
 .name,.shortname{
     margin: 0;
@@ -44,37 +45,35 @@
     font-size: .8rem;
     color: var(--grey);
 }
-.rectangle{
+
+.rectangle,.greenrectangle{
     padding: 0rem  1.75rem;
-    border: 2px solid var(--red);
     border-radius: 30px;
+    min-width: 60px;
+    text-align: center;
+}
+.rectangle{
+    border: 2px solid var(--red);
 }
 .greenrectangle{
-    padding: 0rem  1.75rem;
     border: 2px solid var(--green);
-    border-radius: 30px;
 }
 
-.circle{
+.circle,.greencircle{
     padding: 5px;
-    width: 35px;
-    height: 35px;
+    width: 2.2rem;
+    height: 2.2rem;
     border-radius: 50%;
-    border: 2px solid var(--red);
     display: flex;
     justify-content: center;
     align-items: center;
 }
-
+.circle{
+   border: 2px solid var(--red);
+}
 .greencircle{
     border: 2px solid var(--green);
-    padding: 5px;
-    width: 35px;
-    height: 35px;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    
 }
 
 .price_change{
@@ -106,4 +105,5 @@
 
 .current_price{
     margin: 0;
+    min-width: 20em;
 }

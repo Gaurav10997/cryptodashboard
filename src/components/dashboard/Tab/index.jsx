@@ -6,6 +6,7 @@ import TabList from '@mui/lab/TabList';
 import TabPanel from '@mui/lab/TabPanel';
 import Grid from '../GridCard';
 import "./styles.css"
+import List from '../ListCard';
 export default function Tabs({coins}) {
   const [value, setValue] = React.useState('grid');
 
@@ -47,10 +48,27 @@ export default function Tabs({coins}) {
               )
             })}
           </div>
-          
-         <Grid></Grid>
         </TabPanel>
-        <TabPanel value="list">List View Showed here</TabPanel>
+        <TabPanel value="list">
+        <div className='flex_page' >
+            {coins.map((coin,index)=>{
+              return(
+                <List key = {index} 
+                image={coin.image}
+                symbol={coin.symbol}
+                current_price={coin.current_price.toFixed(4)}
+                total_volume={coin.total_volume}
+                total_supply={coin.total_supply}
+                price_change_24h={coin.price_change_24h.toFixed(2)}
+                market_cap={coin.market_cap}
+                sign={coin.price_change_24h>0}
+                name={coin.name}    />
+               
+              )
+            })}
+          </div>
+
+        </TabPanel>
       </TabContext>
     </div>
   );
