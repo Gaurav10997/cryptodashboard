@@ -1,0 +1,23 @@
+.MuiButtonBase-root{
+    color: var(--white)!important;
+    font-size: large  !important;
+    justify-content: space-around;
+}
+.MuiPagination-ul{
+    width: 400px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  
+
+}
+
+.css-wjh20t-MuiPagination-ul{
+    display: flex !important;
+    justify-content: space-around;
+    align-items: center;
+}
+.paging__main{
+     width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}

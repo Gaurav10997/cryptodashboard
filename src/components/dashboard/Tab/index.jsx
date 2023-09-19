@@ -7,7 +7,8 @@ import TabPanel from '@mui/lab/TabPanel';
 import Grid from '../GridCard';
 import "./styles.css"
 import List from '../ListCard';
-export default function Tabs({coins}) {
+import CircularProgress from '@mui/material/CircularProgress';
+export default function Tabs({coins,isLoading}) {
   const [value, setValue] = React.useState('grid');
 
   const handleChange = (event, newValue) => {
@@ -32,7 +33,7 @@ export default function Tabs({coins}) {
           </TabList>
         <TabPanel value="grid">
           <div className='grid__page' >
-            {coins.map((coin,index)=>{
+            {!isLoading ? coins.map((coin,index)=>{
               return(
                 <Grid key = {index} 
                 image={coin.image}
@@ -46,12 +47,16 @@ export default function Tabs({coins}) {
                 name={coin.name}    />
                
               )
-            })}
+            }): 
+            <div className="circular">
+              <CircularProgress />
+            </div>
+           }
           </div>
         </TabPanel>
         <TabPanel value="list">
         <div className='flex_page' >
-            {coins.map((coin,index)=>{
+            { !isLoading ? coins.map((coin,index)=>{
               return(
                 <List key = {index} 
                 image={coin.image}
@@ -65,7 +70,9 @@ export default function Tabs({coins}) {
                 name={coin.name}    />
                
               )
-            })}
+            }): <div className="circular">
+            <CircularProgress />
+          </div>}
           </div>
 
         </TabPanel>

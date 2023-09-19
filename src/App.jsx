@@ -6,6 +6,7 @@ import MainComponent from "./components/landingPage/MainComponent"
 import HomePage from "./pages/Home"
 import { Route,Routes } from "react-router-dom"
 import DashBoardPage from "./pages/DashBoard"
+import ProductPage from "./components/ProductPage"
 function App() {
   return (
     <>
@@ -13,6 +14,7 @@ function App() {
       <Routes>
         <Route path={"/"}  element={<HomePage/>}/>
         <Route path="/dashboard"  element={<DashBoardPage/>}/>
+        <Route path="/dashboard/:id"  element={<ProductPage/>}/>
       </Routes>
     </div>
       

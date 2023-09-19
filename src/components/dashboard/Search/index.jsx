@@ -1,6 +1,7 @@
 
 import SearchIcon from '@mui/icons-material/Search';
 import "./styles.css"
+
 import { useState } from 'react';
 function Search({handleChange}) {
  
